@@ -1,0 +1,105 @@
+/* Base Styles */
+body {
+    font-family: 'Merriweather', serif; /* Christmas-y font */
+    background-color: #e0f7fa; /* Light blue for a wintery feel */
+    margin: 0;
+    padding: 20px;
+    background-image: url('../images/snowflakes.webp'); /* Adjust path if needed */
+    background-repeat: no-repeat;
+    background-size: cover; /* Cover ensures the image covers the entire background */
+    background-position: center; /* Centers the background image */
+}
+
+/* Wishlist Container */
+.wishlist-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    color: #3e2723; /* Dark brown for text */
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 30px;
+    color: #b71c1c; /* Festive red */
+    text-shadow: 2px 2px #ffeb3b; /* Golden shadow for a festive glow */
+}
+
+/* Wishlist Grid */
+.wishlist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+/* Wishlist Items */
+.wishlist-item {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+    position: relative;
+    border: 3px solid #d32f2f; /* Festive red border */
+    background-image: url('images/christmas-lights-border.png'); /* Add a lights border image */
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+}
+
+.wishlist-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 5px solid #388e3c; /* Evergreen border under image */
+}
+
+.wishlist-description {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* White with slight transparency */
+}
+
+.wishlist-description h3 {
+    margin: 0;
+    color: #d84315; /* Orange-red for title */
+    font-size: 1.8em;
+}
+
+.wishlist-description p {
+    color: #5d4037; /* Warm brown for text */
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+/* Hover Effects */
+.wishlist-item:hover {
+    transform: scale(1.07);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Christmas Decorations */
+.wishlist-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+    .wishlist {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.sale-message {
+    font-size: 1.5em;
+    color: #d32f2f; /* Festive red */
+    margin-top: 20px;
+    font-weight: bold; /* Makes the text bold */
+}
